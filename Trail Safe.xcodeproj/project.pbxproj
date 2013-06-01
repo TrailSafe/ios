@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E97C0C175A833B00AD0582 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E97C0B175A833B00AD0582 /* Logo.png */; };
+		17E97C0E175A836100AD0582 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E97C0D175A836100AD0582 /* Logo@2x.png */; };
+		17E97C10175A859200AD0582 /* cubano.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E97C0F175A859200AD0582 /* cubano.ttf */; };
+		17E97C15175A9B7B00AD0582 /* backbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E97C13175A9B7A00AD0582 /* backbtn.png */; };
+		17E97C16175A9B7B00AD0582 /* backbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E97C14175A9B7B00AD0582 /* backbtn@2x.png */; };
 		E29D2907175A4E8900594292 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29D2906175A4E8900594292 /* UIKit.framework */; };
 		E29D2909175A4E8900594292 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29D2908175A4E8900594292 /* Foundation.framework */; };
 		E29D290B175A4E8900594292 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29D290A175A4E8900594292 /* CoreGraphics.framework */; };
@@ -31,6 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17E97C0B175A833B00AD0582 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = resources/Logo.png; sourceTree = "<group>"; };
+		17E97C0D175A836100AD0582 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo@2x.png"; path = "resources/Logo@2x.png"; sourceTree = "<group>"; };
+		17E97C0F175A859200AD0582 /* cubano.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = cubano.ttf; path = resources/cubano.ttf; sourceTree = "<group>"; };
+		17E97C13175A9B7A00AD0582 /* backbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backbtn.png; path = resources/backbtn.png; sourceTree = "<group>"; };
+		17E97C14175A9B7B00AD0582 /* backbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbtn@2x.png"; path = "resources/backbtn@2x.png"; sourceTree = "<group>"; };
 		E29D2903175A4E8900594292 /* Trail Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trail Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29D2906175A4E8900594292 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E29D2908175A4E8900594292 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +151,11 @@
 		E29D292B175A4F6400594292 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				17E97C13175A9B7A00AD0582 /* backbtn.png */,
+				17E97C14175A9B7B00AD0582 /* backbtn@2x.png */,
+				17E97C0F175A859200AD0582 /* cubano.ttf */,
+				17E97C0D175A836100AD0582 /* Logo@2x.png */,
+				17E97C0B175A833B00AD0582 /* Logo.png */,
 				E29D292C175A4F7D00594292 /* default.css */,
 			);
 			name = resources;
@@ -236,6 +251,11 @@
 				E29D291D175A4E8900594292 /* Default-568h@2x.png in Resources */,
 				E29D2920175A4E8900594292 /* MainStoryboard.storyboard in Resources */,
 				E29D292D175A4F7E00594292 /* default.css in Resources */,
+				17E97C0C175A833B00AD0582 /* Logo.png in Resources */,
+				17E97C0E175A836100AD0582 /* Logo@2x.png in Resources */,
+				17E97C10175A859200AD0582 /* cubano.ttf in Resources */,
+				17E97C15175A9B7B00AD0582 /* backbtn.png in Resources */,
+				17E97C16175A9B7B00AD0582 /* backbtn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +409,7 @@
 				E29D2928175A4E8900594292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
