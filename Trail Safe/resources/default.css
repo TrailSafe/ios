@@ -11,15 +11,12 @@
 .backBtn{
     background-color:none;
 }
-#personalInfo {
-
-}
 
 label{
  color: #371D10;
  }
 
-button {
+.ts-button {
     background-color: #371D10;
     color: #F9F5BA;
     height:30px;  
