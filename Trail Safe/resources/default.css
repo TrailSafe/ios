@@ -1,0 +1,19 @@
+#personalInfo {
+    background-color: linear-gradient(#f2f4f6,#000000);
+}
+
+#personalInfo #name {
+    color: #ffffff;
+}
+
+#personalInfo #phoneNumber {
+    color: #ffffff;
+}
+
+//    color            : #446620;
+//    background-color : linear-gradient(#87c44a, #b4da77);
+//    border-width     : 1px;
+//    border-color     : #84a254;
+//    border-radius    : 10px;
+//    font-size        : 15px;
+//    font-weight      : bold;

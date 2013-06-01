@@ -17,7 +17,15 @@
 		E29D291B175A4E8900594292 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E29D291A175A4E8900594292 /* Default@2x.png */; };
 		E29D291D175A4E8900594292 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E29D291C175A4E8900594292 /* Default-568h@2x.png */; };
 		E29D2920175A4E8900594292 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29D291E175A4E8900594292 /* MainStoryboard.storyboard */; };
-		E29D2923175A4E8900594292 /* TSFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2922175A4E8900594292 /* TSFViewController.m */; };
+		E29D292D175A4F7E00594292 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = E29D292C175A4F7D00594292 /* default.css */; };
+		E29D2931175A534F00594292 /* TSFPersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2930175A534F00594292 /* TSFPersonalInfoViewController.m */; };
+		E29D2934175A57AD00594292 /* TSFICEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2933175A57AD00594292 /* TSFICEViewController.m */; };
+		E29D293B175A5AF100594292 /* TSFSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D293A175A5AF100594292 /* TSFSplashViewController.m */; };
+		E29D293E175A5C3C00594292 /* TSFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D293D175A5C3C00594292 /* TSFHomeViewController.m */; };
+		E29D2942175A5EE100594292 /* TSFBackToHomeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2941175A5EE100594292 /* TSFBackToHomeSegue.m */; };
+		E29D2945175A63B600594292 /* TSFOnHikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2944175A63B600594292 /* TSFOnHikeViewController.m */; };
+		E29D2948175A67B900594292 /* TSFNeedHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */; };
+		E29D294E175A6BE800594292 /* TSFStartHikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +43,23 @@
 		E29D291A175A4E8900594292 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E29D291C175A4E8900594292 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E29D291F175A4E8900594292 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E29D2921175A4E8900594292 /* TSFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSFViewController.h; sourceTree = "<group>"; };
-		E29D2922175A4E8900594292 /* TSFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSFViewController.m; sourceTree = "<group>"; };
+		E29D292C175A4F7D00594292 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = default.css; path = resources/default.css; sourceTree = "<group>"; };
+		E29D292F175A534F00594292 /* TSFPersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFPersonalInfoViewController.h; path = controllers/TSFPersonalInfoViewController.h; sourceTree = "<group>"; };
+		E29D2930175A534F00594292 /* TSFPersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFPersonalInfoViewController.m; path = controllers/TSFPersonalInfoViewController.m; sourceTree = "<group>"; };
+		E29D2932175A57AD00594292 /* TSFICEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFICEViewController.h; path = controllers/TSFICEViewController.h; sourceTree = "<group>"; };
+		E29D2933175A57AD00594292 /* TSFICEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFICEViewController.m; path = controllers/TSFICEViewController.m; sourceTree = "<group>"; };
+		E29D2939175A5AF100594292 /* TSFSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFSplashViewController.h; path = controllers/TSFSplashViewController.h; sourceTree = "<group>"; };
+		E29D293A175A5AF100594292 /* TSFSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFSplashViewController.m; path = controllers/TSFSplashViewController.m; sourceTree = "<group>"; };
+		E29D293C175A5C3C00594292 /* TSFHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFHomeViewController.h; path = controllers/TSFHomeViewController.h; sourceTree = "<group>"; };
+		E29D293D175A5C3C00594292 /* TSFHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFHomeViewController.m; path = controllers/TSFHomeViewController.m; sourceTree = "<group>"; };
+		E29D2940175A5EE100594292 /* TSFBackToHomeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFBackToHomeSegue.h; path = models/TSFBackToHomeSegue.h; sourceTree = "<group>"; };
+		E29D2941175A5EE100594292 /* TSFBackToHomeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFBackToHomeSegue.m; path = models/TSFBackToHomeSegue.m; sourceTree = "<group>"; };
+		E29D2943175A63B600594292 /* TSFOnHikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFOnHikeViewController.h; path = controllers/TSFOnHikeViewController.h; sourceTree = "<group>"; };
+		E29D2944175A63B600594292 /* TSFOnHikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFOnHikeViewController.m; path = controllers/TSFOnHikeViewController.m; sourceTree = "<group>"; };
+		E29D2946175A67B900594292 /* TSFNeedHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFNeedHelpViewController.h; path = controllers/TSFNeedHelpViewController.h; sourceTree = "<group>"; };
+		E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFNeedHelpViewController.m; path = controllers/TSFNeedHelpViewController.m; sourceTree = "<group>"; };
+		E29D294C175A6BE800594292 /* TSFStartHikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFStartHikeViewController.h; path = controllers/TSFStartHikeViewController.h; sourceTree = "<group>"; };
+		E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFStartHikeViewController.m; path = controllers/TSFStartHikeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +106,12 @@
 		E29D290C175A4E8900594292 /* Trail Safe */ = {
 			isa = PBXGroup;
 			children = (
+				E29D293F175A5EB300594292 /* models */,
+				E29D292E175A531800594292 /* controllers */,
+				E29D292B175A4F6400594292 /* resources */,
 				E29D2915175A4E8900594292 /* TSFAppDelegate.h */,
 				E29D2916175A4E8900594292 /* TSFAppDelegate.m */,
 				E29D291E175A4E8900594292 /* MainStoryboard.storyboard */,
-				E29D2921175A4E8900594292 /* TSFViewController.h */,
-				E29D2922175A4E8900594292 /* TSFViewController.m */,
 				E29D290D175A4E8900594292 /* Supporting Files */,
 			);
 			path = "Trail Safe";
@@ -105,6 +129,44 @@
 				E29D291C175A4E8900594292 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E29D292B175A4F6400594292 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E29D292C175A4F7D00594292 /* default.css */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		E29D292E175A531800594292 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E29D292F175A534F00594292 /* TSFPersonalInfoViewController.h */,
+				E29D2930175A534F00594292 /* TSFPersonalInfoViewController.m */,
+				E29D2932175A57AD00594292 /* TSFICEViewController.h */,
+				E29D2933175A57AD00594292 /* TSFICEViewController.m */,
+				E29D2939175A5AF100594292 /* TSFSplashViewController.h */,
+				E29D293A175A5AF100594292 /* TSFSplashViewController.m */,
+				E29D293C175A5C3C00594292 /* TSFHomeViewController.h */,
+				E29D293D175A5C3C00594292 /* TSFHomeViewController.m */,
+				E29D2943175A63B600594292 /* TSFOnHikeViewController.h */,
+				E29D2944175A63B600594292 /* TSFOnHikeViewController.m */,
+				E29D2946175A67B900594292 /* TSFNeedHelpViewController.h */,
+				E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */,
+				E29D294C175A6BE800594292 /* TSFStartHikeViewController.h */,
+				E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		E29D293F175A5EB300594292 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E29D2940175A5EE100594292 /* TSFBackToHomeSegue.h */,
+				E29D2941175A5EE100594292 /* TSFBackToHomeSegue.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +226,7 @@
 				E29D291B175A4E8900594292 /* Default@2x.png in Resources */,
 				E29D291D175A4E8900594292 /* Default-568h@2x.png in Resources */,
 				E29D2920175A4E8900594292 /* MainStoryboard.storyboard in Resources */,
+				E29D292D175A4F7E00594292 /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +239,14 @@
 			files = (
 				E29D2913175A4E8900594292 /* main.m in Sources */,
 				E29D2917175A4E8900594292 /* TSFAppDelegate.m in Sources */,
-				E29D2923175A4E8900594292 /* TSFViewController.m in Sources */,
+				E29D2931175A534F00594292 /* TSFPersonalInfoViewController.m in Sources */,
+				E29D2934175A57AD00594292 /* TSFICEViewController.m in Sources */,
+				E29D293B175A5AF100594292 /* TSFSplashViewController.m in Sources */,
+				E29D293E175A5C3C00594292 /* TSFHomeViewController.m in Sources */,
+				E29D2942175A5EE100594292 /* TSFBackToHomeSegue.m in Sources */,
+				E29D2945175A63B600594292 /* TSFOnHikeViewController.m in Sources */,
+				E29D2948175A67B900594292 /* TSFNeedHelpViewController.m in Sources */,
+				E29D294E175A6BE800594292 /* TSFStartHikeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +299,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -253,6 +324,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -261,6 +333,10 @@
 		E29D2927175A4E8900594292 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Trail Safe/Trail Safe-Prefix.pch";
 				INFOPLIST_FILE = "Trail Safe/Trail Safe-Info.plist";
@@ -272,6 +348,10 @@
 		E29D2928175A4E8900594292 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Trail Safe/Trail Safe-Prefix.pch";
 				INFOPLIST_FILE = "Trail Safe/Trail Safe-Info.plist";
