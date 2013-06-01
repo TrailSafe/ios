@@ -74,6 +74,9 @@
                             <constraint firstItem="fqT-d7-Q1q" firstAttribute="top" secondItem="3Yv-9y-eD2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nQ9-fo-nLq"/>
                             <constraint firstAttribute="trailing" secondItem="qGl-vb-i4q" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="p4C-Hb-1di"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleId" value="personalInfo"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="BXw-lY-MmZ"/>
                     <connections>
