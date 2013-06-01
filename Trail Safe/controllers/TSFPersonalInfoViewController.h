@@ -10,6 +10,9 @@
 
 @interface TSFPersonalInfoViewController : UIViewController <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+
 - (IBAction)submitData:(id)sender;
 
 @end

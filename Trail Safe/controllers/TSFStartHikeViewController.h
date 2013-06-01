@@ -12,4 +12,6 @@
 
 - (IBAction)back:(id)sender;
 
+- (IBAction)timerChanged:(id)sender;
+
 @end

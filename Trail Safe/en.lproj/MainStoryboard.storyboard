@@ -87,6 +87,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="BXw-lY-MmZ"/>
                     <connections>
+                        <outlet property="nameField" destination="fqT-d7-Q1q" id="Cui-2F-byg"/>
+                        <outlet property="phoneField" destination="qGl-vb-i4q" id="z2Q-6F-KCH"/>
                         <segue destination="PCQ-eT-g6N" kind="push" identifier="InCaseOfEmergencyInfo" id="7HS-yR-Rgw"/>
                     </connections>
                 </viewController>
@@ -461,11 +463,6 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of Hike" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r64-yi-mhe">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-WE-xuU">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="t7C-tm-jC5"/>
@@ -482,10 +479,6 @@
                                     <segue destination="8f9-1p-uJS" kind="push" id="XOy-8g-2tL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu3-7V-yqZ">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Return Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgB-kj-WBI">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -545,7 +538,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
                                 <connections>
-                                    <action selector="timerChanged:" destination="Uiy-S7-DYF" eventType="valueChanged" id="4dJ-qZ-0Nx"/>
+                                    <action selector="timerChanged:" destination="Uiy-S7-DYF" eventType="valueChanged" id="89w-D7-kJb"/>
                                 </connections>
                             </datePicker>
                         </subviews>
@@ -555,14 +548,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="gDT-p5-YBb" firstAttribute="leading" secondItem="M8C-iC-PaG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="8Ih-Ie-5If"/>
                             <constraint firstItem="OgB-kj-WBI" firstAttribute="leading" secondItem="pdT-Zu-n8i" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8qI-xV-5VV"/>
                             <constraint firstItem="8fv-WE-xuU" firstAttribute="leading" secondItem="pdT-Zu-n8i" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A1b-iP-WER"/>
-                            <constraint firstAttribute="trailing" secondItem="Bu3-7V-yqZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Aw7-6G-g41"/>
-                            <constraint firstItem="Bu3-7V-yqZ" firstAttribute="top" secondItem="pdT-Zu-n8i" secondAttribute="top" constant="99" id="DU0-dR-Sq3"/>
+                            <constraint firstItem="0bb-fe-bC2" firstAttribute="leading" secondItem="pdT-Zu-n8i" secondAttribute="leading" type="default" id="FJG-mB-LIZ"/>
                             <constraint firstAttribute="bottom" secondItem="8fv-WE-xuU" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="GX6-id-slH"/>
-                            <constraint firstItem="OgB-kj-WBI" firstAttribute="top" secondItem="pdT-Zu-n8i" secondAttribute="top" constant="146" id="JbZ-XP-D5U"/>
-                            <constraint firstItem="Bu3-7V-yqZ" firstAttribute="leading" secondItem="pdT-Zu-n8i" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="O5F-SD-jzG"/>
-                            <constraint firstItem="r64-yi-mhe" firstAttribute="leading" secondItem="pdT-Zu-n8i" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QkG-Ko-ffP"/>
+                            <constraint firstItem="0bb-fe-bC2" firstAttribute="top" secondItem="OgB-kj-WBI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="I1f-TJ-o8a"/>
+                            <constraint firstItem="OgB-kj-WBI" firstAttribute="top" secondItem="M8C-iC-PaG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IFH-Mg-FuL"/>
                             <constraint firstItem="M8C-iC-PaG" firstAttribute="leading" secondItem="pdT-Zu-n8i" secondAttribute="leading" constant="15" id="RWd-Uy-ca5"/>
-                            <constraint firstItem="r64-yi-mhe" firstAttribute="top" secondItem="pdT-Zu-n8i" secondAttribute="top" constant="62" id="VMS-hK-M6k"/>
                             <constraint firstItem="gDT-p5-YBb" firstAttribute="top" secondItem="pdT-Zu-n8i" secondAttribute="top" constant="23" id="npF-Jh-7tR"/>
                             <constraint firstAttribute="trailing" secondItem="8fv-WE-xuU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pWB-5P-cDG"/>
                         </constraints>
@@ -679,7 +669,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="submitData:"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="numberField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="phoneField" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -707,6 +696,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSFPersonalInfoViewController.h"/>
             <relationships>
                 <relationship kind="action" name="submitData:"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phoneField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="TSFSplashViewController" superclassName="UIViewController">
@@ -716,6 +707,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSFStartHikeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="timerChanged:"/>
             </relationships>
         </class>
     </classes>

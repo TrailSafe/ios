@@ -18,4 +18,7 @@
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
+- (IBAction)timerChanged:(id)sender {
+}
+
 @end
