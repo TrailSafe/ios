@@ -167,7 +167,6 @@
         <!--Navigation Controller-->
         <scene sceneID="LN0-S6-MPp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zqn-Rh-JJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="xne-A4-NNd" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OOL-W2-mrt">
                         <autoresizingMask key="autoresizingMask"/>
@@ -176,6 +175,7 @@
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="cjb-SK-gNT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqn-Rh-JJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359" y="152"/>
         </scene>
@@ -230,15 +230,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10 second countdown timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkz-eJ-Mrz">
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="p4q-ZY-Egt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="508-ng-nHY">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Need Help Now">
@@ -249,7 +240,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="85C-vg-ek8" kind="push" id="Qae-Oh-Qsf"/>
+                                    <segue destination="85C-vg-ek8" kind="push" identifier="needHelpNow" id="Qae-Oh-Qsf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3o-tn-L3R">
@@ -268,16 +259,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="dkz-eJ-Mrz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6zO-nS-4nf"/>
                             <constraint firstItem="508-ng-nHY" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7Xb-7J-9ys"/>
-                            <constraint firstItem="dkz-eJ-Mrz" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A3Q-yf-hk3"/>
                             <constraint firstAttribute="trailing" secondItem="508-ng-nHY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="G56-bC-ILw"/>
                             <constraint firstAttribute="trailing" secondItem="z3o-tn-L3R" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JDs-em-gjN"/>
                             <constraint firstItem="WGk-9s-mXg" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ncc-cB-nQW"/>
                             <constraint firstItem="WGk-9s-mXg" firstAttribute="top" secondItem="YuN-Wq-3lQ" secondAttribute="top" constant="137" id="P6t-i6-pd4"/>
                             <constraint firstItem="eFC-4F-RAO" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="76" id="Tcq-Qb-5YN"/>
                             <constraint firstItem="z3o-tn-L3R" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Wvb-Iv-rYW"/>
-                            <constraint firstItem="dkz-eJ-Mrz" firstAttribute="top" secondItem="YuN-Wq-3lQ" secondAttribute="top" constant="178" id="YCD-XG-RwF"/>
                             <constraint firstItem="fXY-44-cjE" firstAttribute="top" secondItem="YuN-Wq-3lQ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="daD-Os-6Ud"/>
                             <constraint firstAttribute="bottom" secondItem="z3o-tn-L3R" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="fkL-LK-Gyy"/>
                             <constraint firstItem="fXY-44-cjE" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iMv-ow-V6U"/>
@@ -454,7 +442,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="7wW-XT-8Ze">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="7wW-XT-8Ze">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="Sh3-xS-Hxp"/>
                                 </constraints>
@@ -462,7 +450,7 @@
                                     <!--2013-06-01 17:10:41 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -480,7 +468,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-f3-3E5">
@@ -580,28 +568,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TIME TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGZ-Cz-RC6">
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="132" id="jyt-QM-Cjx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8k0-po-MaK" firstAttribute="leading" secondItem="HXe-Or-V73" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8YI-v8-CGp"/>
-                            <constraint firstItem="KGZ-Cz-RC6" firstAttribute="trailing" secondItem="iQs-m8-rgl" secondAttribute="trailing" type="default" id="AhZ-we-jm2"/>
                             <constraint firstAttribute="trailing" secondItem="8k0-po-MaK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="AkL-BQ-aOe"/>
                             <constraint firstAttribute="trailing" secondItem="hjj-fJ-0IX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FSb-qm-K8q"/>
                             <constraint firstItem="hjj-fJ-0IX" firstAttribute="leading" secondItem="HXe-Or-V73" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HWH-0Z-RaF"/>
                             <constraint firstItem="VrF-57-CMb" firstAttribute="leading" secondItem="HXe-Or-V73" secondAttribute="leading" constant="106" id="Kr6-rX-M4K"/>
                             <constraint firstItem="iQs-m8-rgl" firstAttribute="leading" secondItem="HXe-Or-V73" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="O6I-xY-Pjv"/>
-                            <constraint firstItem="KGZ-Cz-RC6" firstAttribute="leading" secondItem="HXe-Or-V73" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Rjy-Ld-yVr"/>
                             <constraint firstAttribute="bottom" secondItem="hjj-fJ-0IX" secondAttribute="bottom" constant="80" id="gRg-rM-niu"/>
                             <constraint firstItem="iQs-m8-rgl" firstAttribute="top" secondItem="HXe-Or-V73" secondAttribute="top" constant="54" id="lsp-0q-Xcl"/>
-                            <constraint firstItem="KGZ-Cz-RC6" firstAttribute="top" secondItem="HXe-Or-V73" secondAttribute="top" constant="102" id="rEV-J0-EBo"/>
                             <constraint firstItem="VrF-57-CMb" firstAttribute="top" secondItem="HXe-Or-V73" secondAttribute="top" constant="20" symbolic="YES" type="default" id="sZS-sM-hJ8"/>
                             <constraint firstAttribute="bottom" secondItem="8k0-po-MaK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="yFw-1R-VT3"/>
                         </constraints>
@@ -614,6 +591,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <classes>
+        <class className="JDDateCountdownFlipView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JDDateCountdownFlipView.h"/>
+        </class>
+        <class className="JDFlipNumberView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JDFlipNumberView.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -631,6 +614,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="back:"/>
                 <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="countdownTimer" candidateClass="JDFlipNumberView"/>
             </relationships>
         </class>
         <class className="TSFOnHelpViewController" superclassName="UIViewController">
@@ -641,6 +625,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="TSFOnHikeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSFOnHikeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="countdownTimer" candidateClass="JDDateCountdownFlipView"/>
+            </relationships>
         </class>
         <class className="TSFPersonalInfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSFPersonalInfoViewController.h"/>
@@ -664,7 +651,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DV0-d0-7Qg"/>
         <segue reference="PTT-UN-lNX"/>
+        <segue reference="DV0-d0-7Qg"/>
     </inferredMetricsTieBreakers>
 </document>

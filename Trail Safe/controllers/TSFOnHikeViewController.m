@@ -7,32 +7,45 @@
 //
 
 #import "TSFOnHikeViewController.h"
+#import "JDDateCountdownFlipView.h"
+
 
 @interface TSFOnHikeViewController ()
+
+@property (weak, nonatomic) IBOutlet JDDateCountdownFlipView *countdownTimer;
 
 @end
 
 @implementation TSFOnHikeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    
+    self.countdownTimer = [self createCountdownTimer];
+    
+    [self.view addSubview:self.countdownTimer];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSDate *)countdownToDate {
+    NSDateComponents *currentComps = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:[NSDate date]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat: @"dd.MM.yy HH:mm"];
+    return [dateFormatter dateFromString:[NSString stringWithFormat: @"01.01.%d 00:00", currentComps.year + 1]];
 }
+
+#pragma mark - Countdown Timer
+
+- (JDDateCountdownFlipView *)createCountdownTimer {
+    JDDateCountdownFlipView  *countdownTimer = [[JDDateCountdownFlipView alloc] initWithDayDigitCount:0];
+    countdownTimer.targetDate = [self countdownToDate];
+    
+    [countdownTimer setCenter:self.view.center];
+    [countdownTimer setFrame:CGRectMake(countdownTimer.frame.origin.x + 205,countdownTimer.frame.origin.y,self.view.frame.size.width,400)];
+
+    return countdownTimer;
+}
+
 
 @end
