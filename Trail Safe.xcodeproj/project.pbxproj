@@ -80,7 +80,6 @@
 		E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFStartHikeViewController.m; path = controllers/TSFStartHikeViewController.m; sourceTree = "<group>"; };
 		E29D294F175A718300594292 /* TSFOnHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFOnHelpViewController.h; path = controllers/TSFOnHelpViewController.h; sourceTree = "<group>"; };
 		E29D2950175A718300594292 /* TSFOnHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFOnHelpViewController.m; path = controllers/TSFOnHelpViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		E2B8B147175A7E8400F98E09 /* JDDateCountdownFlipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDDateCountdownFlipView.h; sourceTree = "<group>"; };
 		E2B8B148175A7E8400F98E09 /* JDDateCountdownFlipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDDateCountdownFlipView.m; sourceTree = "<group>"; };
 		E2B8B149175A7E8400F98E09 /* JDFlipNumberDigitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFlipNumberDigitView.h; sourceTree = "<group>"; };
