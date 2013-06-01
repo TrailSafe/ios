@@ -171,16 +171,16 @@
                             <constraint firstItem="BVN-dz-CyZ" firstAttribute="top" secondItem="nnd-SP-2nq" secondAttribute="top" constant="233" id="Cf4-kA-Ns0"/>
                             <constraint firstAttribute="bottom" secondItem="qSj-zu-Svp" secondAttribute="bottom" constant="14" id="DU6-Ph-yDR"/>
                             <constraint firstItem="9Bc-Fm-Nmj" firstAttribute="leading" secondItem="7jj-Ob-Eum" secondAttribute="leading" type="default" id="DfF-Pe-DxR"/>
-                            <constraint firstItem="dNT-2o-n5W" firstAttribute="trailing" secondItem="BVN-dz-CyZ" secondAttribute="trailing" type="default" id="EOg-Rw-9Kd"/>
                             <constraint firstItem="2Jy-YO-Age" firstAttribute="trailing" secondItem="BVN-dz-CyZ" secondAttribute="trailing" type="default" id="HIM-b2-y5R"/>
+                            <constraint firstItem="dNT-2o-n5W" firstAttribute="leading" secondItem="BVN-dz-CyZ" secondAttribute="leading" type="default" id="IXa-e0-kKv"/>
                             <constraint firstItem="9Bc-Fm-Nmj" firstAttribute="top" secondItem="2Jy-YO-Age" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jot-gg-tzg"/>
                             <constraint firstItem="voc-PO-Uvw" firstAttribute="leading" secondItem="7jj-Ob-Eum" secondAttribute="leading" type="default" id="NzP-pp-ARB"/>
-                            <constraint firstItem="dNT-2o-n5W" firstAttribute="leading" secondItem="nnd-SP-2nq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zek-wS-t43"/>
+                            <constraint firstItem="dNT-2o-n5W" firstAttribute="top" secondItem="nnd-SP-2nq" secondAttribute="top" constant="127" id="c8e-yc-IIw"/>
+                            <constraint firstItem="dNT-2o-n5W" firstAttribute="leading" secondItem="nnd-SP-2nq" secondAttribute="leading" constant="15" id="e8n-S0-yNz"/>
                             <constraint firstItem="2Jy-YO-Age" firstAttribute="leading" secondItem="BVN-dz-CyZ" secondAttribute="leading" type="default" id="e9J-qe-cSN"/>
                             <constraint firstItem="imJ-uz-SrF" firstAttribute="top" secondItem="nnd-SP-2nq" secondAttribute="top" constant="8" id="ezi-Qe-B9L"/>
                             <constraint firstItem="qSj-zu-Svp" firstAttribute="trailing" secondItem="2Jy-YO-Age" secondAttribute="trailing" type="default" id="f7U-Zz-s7C"/>
                             <constraint firstItem="voc-PO-Uvw" firstAttribute="top" secondItem="nnd-SP-2nq" secondAttribute="top" constant="193" id="qbk-hH-DYU"/>
-                            <constraint firstItem="dNT-2o-n5W" firstAttribute="top" secondItem="nnd-SP-2nq" secondAttribute="top" constant="126" id="sao-d8-xve"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
