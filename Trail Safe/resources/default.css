@@ -1,19 +1,26 @@
+.view{
+    background-color: #F06600;
+}
+
+.styleHeader{
+    font-size: 30px;
+    color: #F9F5BA;
+    font-weight:900;
+}
+
+.backBtn{
+    background-color:none;
+}
 #personalInfo {
-    background-color: linear-gradient(#f2f4f6,#000000);
+
 }
 
-#personalInfo #name {
-    color: #ffffff;
-}
+label{
+ color: #371D10;
+ }
 
-#personalInfo #phoneNumber {
-    color: #ffffff;
+button {
+    background-color: #371D10;
+    color: #F9F5BA;
+    height:30px;  
 }
-
-//    color            : #446620;
-//    background-color : linear-gradient(#87c44a, #b4da77);
-//    border-width     : 1px;
-//    border-color     : #84a254;
-//    border-radius    : 10px;
-//    font-size        : 15px;
-//    font-weight      : bold;
