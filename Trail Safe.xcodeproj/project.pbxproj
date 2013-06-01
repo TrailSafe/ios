@@ -26,6 +26,7 @@
 		E29D2945175A63B600594292 /* TSFOnHikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2944175A63B600594292 /* TSFOnHikeViewController.m */; };
 		E29D2948175A67B900594292 /* TSFNeedHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */; };
 		E29D294E175A6BE800594292 /* TSFStartHikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */; };
+		E29D2951175A718300594292 /* TSFOnHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2950175A718300594292 /* TSFOnHelpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFNeedHelpViewController.m; path = controllers/TSFNeedHelpViewController.m; sourceTree = "<group>"; };
 		E29D294C175A6BE800594292 /* TSFStartHikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFStartHikeViewController.h; path = controllers/TSFStartHikeViewController.h; sourceTree = "<group>"; };
 		E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFStartHikeViewController.m; path = controllers/TSFStartHikeViewController.m; sourceTree = "<group>"; };
+		E29D294F175A718300594292 /* TSFOnHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFOnHelpViewController.h; path = controllers/TSFOnHelpViewController.h; sourceTree = "<group>"; };
+		E29D2950175A718300594292 /* TSFOnHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFOnHelpViewController.m; path = controllers/TSFOnHelpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */,
 				E29D294C175A6BE800594292 /* TSFStartHikeViewController.h */,
 				E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */,
+				E29D294F175A718300594292 /* TSFOnHelpViewController.h */,
+				E29D2950175A718300594292 /* TSFOnHelpViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				E29D2945175A63B600594292 /* TSFOnHikeViewController.m in Sources */,
 				E29D2948175A67B900594292 /* TSFNeedHelpViewController.m in Sources */,
 				E29D294E175A6BE800594292 /* TSFStartHikeViewController.m in Sources */,
+				E29D2951175A718300594292 /* TSFOnHelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
