@@ -12,4 +12,7 @@
 
 - (IBAction)submitData:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+
 @end
