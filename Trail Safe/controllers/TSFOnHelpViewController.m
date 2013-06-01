@@ -21,15 +21,17 @@
 
 - (IBAction)cancel:(id)sender {
 
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[self callForHelpText] delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[self callForHelpText] delegate:self cancelButtonTitle:@"Keep Calling For Help" destructiveButtonTitle:@"Cancel" otherButtonTitles:nil];
     
     [actionSheet showInView:self.view];
     
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    [[self navigationController] popViewControllerAnimated:YES];
+        
+    if (buttonIndex == 0) {
+        [[self navigationController] popViewControllerAnimated:YES];
+    }
 }
 
 @end
