@@ -95,7 +95,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="styleId" value="personalInfo"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="view"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="BXw-lY-MmZ"/>
@@ -220,7 +220,7 @@
                             <constraint firstItem="0Kr-Sg-oJq" firstAttribute="leading" secondItem="nnd-SP-2nq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y6I-ik-ybw"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="view"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="5Hh-Xd-d9J"/>
@@ -341,6 +341,9 @@
                             <constraint firstItem="VLd-KW-Z0O" firstAttribute="leading" secondItem="YuN-Wq-3lQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="miU-y7-AQn"/>
                             <constraint firstItem="z3o-tn-L3R" firstAttribute="top" secondItem="508-ng-nHY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rtt-q7-C7x"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="AqA-5f-g60"/>
                 </viewController>
@@ -397,7 +400,7 @@
                             <constraint firstItem="iNX-n2-hjC" firstAttribute="top" secondItem="vKD-oX-XLE" secondAttribute="top" constant="95" id="zag-l2-lzB"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="view"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="NrE-46-pYK"/>
@@ -466,7 +469,7 @@
                             <constraint firstAttribute="trailing" secondItem="wBf-UB-SkF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="seB-ep-Gur"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="view"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="6hl-R9-WBm"/>
@@ -554,7 +557,7 @@
                             <constraint firstAttribute="trailing" secondItem="8fv-WE-xuU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pWB-5P-cDG"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="view"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="tnU-Z8-fJR"/>
@@ -626,7 +629,7 @@
                             <constraint firstAttribute="bottom" secondItem="8k0-po-MaK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="yFw-1R-VT3"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="view"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleClass" value="ts-view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="7s6-41-vdK"/>
@@ -701,7 +704,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZAQ-Cl-1Xe"/>
-        <segue reference="N1n-5Y-qNE"/>
+        <segue reference="PTT-UN-lNX"/>
+        <segue reference="DV0-d0-7Qg"/>
     </inferredMetricsTieBreakers>
 </document>
