@@ -32,13 +32,13 @@
 		E29D2948175A67B900594292 /* TSFNeedHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2947175A67B900594292 /* TSFNeedHelpViewController.m */; };
 		E29D294E175A6BE800594292 /* TSFStartHikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */; };
 		E29D2951175A718300594292 /* TSFOnHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29D2950175A718300594292 /* TSFOnHelpViewController.m */; };
+		E29D2953175A786200594292 /* PXEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29D2952175A786200594292 /* PXEngine.framework */; };
 		E2B8B150175A7E8400F98E09 /* JDDateCountdownFlipView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B8B148175A7E8400F98E09 /* JDDateCountdownFlipView.m */; };
 		E2B8B151175A7E8400F98E09 /* JDFlipNumberDigitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B8B14A175A7E8400F98E09 /* JDFlipNumberDigitView.m */; };
 		E2B8B152175A7E8400F98E09 /* JDFlipNumberView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2B8B14B175A7E8400F98E09 /* JDFlipNumberView.bundle */; };
 		E2B8B153175A7E8400F98E09 /* JDFlipNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B8B14D175A7E8400F98E09 /* JDFlipNumberView.m */; };
 		E2B8B154175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B8B14F175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m */; };
 		E2B8B156175A7F2B00F98E09 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B8B155175A7F2B00F98E09 /* QuartzCore.framework */; };
-		E29D2953175A786200594292 /* PXEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29D2952175A786200594292 /* PXEngine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +80,7 @@
 		E29D294D175A6BE800594292 /* TSFStartHikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFStartHikeViewController.m; path = controllers/TSFStartHikeViewController.m; sourceTree = "<group>"; };
 		E29D294F175A718300594292 /* TSFOnHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFOnHelpViewController.h; path = controllers/TSFOnHelpViewController.h; sourceTree = "<group>"; };
 		E29D2950175A718300594292 /* TSFOnHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFOnHelpViewController.m; path = controllers/TSFOnHelpViewController.m; sourceTree = "<group>"; };
+		E29D2952175A786200594292 /* PXEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PXEngine.framework; path = vendor/PXEngine.framework; sourceTree = "<group>"; };
 		E2B8B147175A7E8400F98E09 /* JDDateCountdownFlipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDDateCountdownFlipView.h; sourceTree = "<group>"; };
 		E2B8B148175A7E8400F98E09 /* JDDateCountdownFlipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDDateCountdownFlipView.m; sourceTree = "<group>"; };
 		E2B8B149175A7E8400F98E09 /* JDFlipNumberDigitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFlipNumberDigitView.h; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		E2B8B14E175A7E8400F98E09 /* JDFlipNumberViewImageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFlipNumberViewImageFactory.h; sourceTree = "<group>"; };
 		E2B8B14F175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFlipNumberViewImageFactory.m; sourceTree = "<group>"; };
 		E2B8B155175A7F2B00F98E09 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E29D2952175A786200594292 /* PXEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PXEngine.framework; path = vendor/PXEngine.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,6 @@
 		E29D28FA175A4E8900594292 = {
 			isa = PBXGroup;
 			children = (
-				E2B8B155175A7F2B00F98E09 /* QuartzCore.framework */,
 				E29D290C175A4E8900594292 /* Trail Safe */,
 				E2B8B145175A7E7300F98E09 /* Vendor */,
 				E29D2905175A4E8900594292 /* Frameworks */,
@@ -131,6 +130,7 @@
 		E29D2905175A4E8900594292 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2B8B155175A7F2B00F98E09 /* QuartzCore.framework */,
 				E29D2952175A786200594292 /* PXEngine.framework */,
 				E29D2906175A4E8900594292 /* UIKit.framework */,
 				E29D2908175A4E8900594292 /* Foundation.framework */,
