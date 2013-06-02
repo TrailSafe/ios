@@ -28,6 +28,7 @@
 
 + (void)setDeviceID:(NSString *)deviceID {
     [[NSUserDefaults standardUserDefaults] setObject:deviceID forKey:[self keyDeviceIdentifier]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 

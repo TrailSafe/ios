@@ -11,7 +11,9 @@
 @interface TSFStartHikeViewController : UIViewController
 
 - (IBAction)back:(id)sender;
+- (IBAction)startHike:(id)sender;
 
 - (IBAction)timerChanged:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *hikeTimePicker;
 @end

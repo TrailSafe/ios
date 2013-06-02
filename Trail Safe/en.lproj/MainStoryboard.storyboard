@@ -205,7 +205,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="cjb-SK-gNT"/>
+                        <segue destination="3m2-dh-qCp" kind="relationship" relationship="rootViewController" id="aOx-rx-8wn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqn-Rh-JJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,6 +450,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="6hl-R9-WBm"/>
+                    <connections>
+                        <segue destination="2" kind="push" identifier="gatherPersonalInformation" id="tzx-G5-NCt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lx-WH-nLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,7 +479,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8f9-1p-uJS" kind="push" id="XOy-8g-2tL"/>
+                                    <action selector="startHike:" destination="Uiy-S7-DYF" eventType="touchUpInside" id="riN-f8-buI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Return Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgB-kj-WBI">
@@ -509,7 +512,7 @@
                                     <action selector="back:" destination="Uiy-S7-DYF" eventType="touchUpInside" id="jJ1-ia-EYt"/>
                                 </connections>
                             </button>
-                            <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-fe-bC2">
+                            <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="7200" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-fe-bC2">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="xv1-aR-6aL"/>
                                 </constraints>
@@ -561,6 +564,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="tnU-Z8-fJR"/>
+                    <connections>
+                        <outlet property="hikeTimePicker" destination="0bb-fe-bC2" id="LX7-39-scA"/>
+                        <segue destination="8f9-1p-uJS" kind="push" identifier="startHike" id="GOg-Tb-1x4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQ8-kH-SuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -707,7 +714,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSFStartHikeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="startHike:"/>
                 <relationship kind="action" name="timerChanged:"/>
+                <relationship kind="outlet" name="hikeTimePicker" candidateClass="UIDatePicker"/>
             </relationships>
         </class>
     </classes>
@@ -717,7 +726,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZAQ-Cl-1Xe"/>
+        <segue reference="aOx-rx-8wn"/>
         <segue reference="N1n-5Y-qNE"/>
     </inferredMetricsTieBreakers>
 </document>

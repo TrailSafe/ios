@@ -8,25 +8,83 @@
 
 #import "TSFServiceProvider.h"
 
+@interface TSFServiceProvider ()
+
+@property (nonatomic,retain) NSString *device;
+
+@end
+
 @implementation TSFServiceProvider
 
-+ (void)createUser:(TSFUser *)user withDevice:(NSString *)device {
-    NSString *userURL = [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"/user"];
+- (id)initWithDevice:(NSString *)device {
+    self = [super init];
+    if (self) {
+        self.device = device;
+    }
+    return self;
+}
+
++ (BOOL)doesUserExistsWithDevice:(NSString *)device {
     
+    JXHTTPOperation *response = [self getWithURL:[self userURLWithDevice:device]];
+    return ([response responseStatusCode] == 200);
+}
+
++ (void)createUser:(TSFUser *)user withDevice:(NSString *)device {
     NSDictionary *userData = @{@"user": @{ @"first_name" : user.name,
                                            @"last_name" : @"",
                                            @"phone_number" : user.phoneNumber } };
     
-    [self postWithURL:userURL andData:userData];
+    [self postWithURL:[self userURLWithDevice:device] andData:userData];
 }
 
 + (void)createContact:(TSFContact *)contact withDevice:(NSString *)device {
-    NSString *contactURL = [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"/contact"];
+    NSString *contactURL = [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"contact"];
     [self postWithURL:contactURL andData:[contact toDictionary]];
 }
 
++ (void)createActivity:(TSFActivity *)activity withDevice:(NSString *)device {
+    [self postWithURL:[self activityURLWithDevice:device] andData:[activity toDictionary]];
+}
+
+//{
+//       "activity": {
+//               "id": "f023618b-67ad-4a1c-a514-d279582397a6",
+//               "name": "TSF Test",
+//               "time_remaining": 7199,
+//               "completed": null,
+//               "end_time": "2013-06-02T05:23:58.248Z"
+//           }
+//}
++ (TSFActivity *)currentActivityWithDevice:(NSString *)device {
+    JXHTTPOperation *operation = [self getWithURL:[self currentActivityURLWithDevice:device]];
+    
+    TSFActivity *activity = nil;
+    
+    if ([operation responseStatusCode] == 200) {
+        activity = [[TSFActivity alloc] initWithDictionary:[operation responseJSON]];
+    }
+    
+    return activity;
+}
+
+
+#pragma mark - Service Information
+
 + (NSString *)serviceURL {
     return @"http://api.trailsafeapp.com";
+}
+
++ (NSString *)activityURLWithDevice:device {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"activities"];
+}
+
++ (NSString *)userURLWithDevice:(NSString *)device {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"user"];
+}
+
++ currentActivityURLWithDevice:(NSString *)device {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"current_activity"];
 }
 
 + (NSString *)apiKey {
@@ -37,19 +95,30 @@
     return [NSString stringWithFormat:@"%@/devices/%@",[self serviceURL],device];
 }
 
+#pragma mark - Request Methods
 
-+ (id)postWithURL:(NSString *)url andData:(NSDictionary *)dictionary {
+
++ (JXHTTPOperation *)getWithURL:(NSString *)url {
+    NSLog(@"GET %@",url);
+
+    JXHTTPOperation *operation = [[JXHTTPOperation alloc] initWithURL:[NSURL URLWithString:url]];
+    operation.requestHeaders = @{@"Authorization": [self apiKey] };
+
+    [operation startAndWaitUntilFinished];
+    
+    return operation;
+}
+
++ (JXHTTPOperation *)postWithURL:(NSString *)url andData:(NSDictionary *)dictionary {
+    NSLog(@"POST %@",url);
     
     JXHTTPOperation *operation = [[JXHTTPOperation alloc] initWithURL:[NSURL URLWithString:url]];
-    operation.requestBody = [[JXHTTPFormEncodedBody alloc] initWithDictionary:dictionary];
+    operation.requestBody = [JXHTTPJSONBody withJSONObject:dictionary];
     operation.requestHeaders = @{@"Authorization": [self apiKey] };
-    
     
     [operation startAndWaitUntilFinished];
     
-    NSString *result = [operation responseString];
-    NSLog(@"%@",result);
-    return result;
+    return operation;
 }
 
 @end

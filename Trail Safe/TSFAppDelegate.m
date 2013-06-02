@@ -15,7 +15,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self generateUniqueID];
     
-    [TSFServiceProvider createUser:[TSFUser currentUser] withDevice:[TSFDevice deviceID]];
+    if (! [TSFServiceProvider doesUserExistsWithDevice:[TSFDevice deviceID]]) {
+        [TSFServiceProvider createUser:[TSFUser currentUser] withDevice:[TSFDevice deviceID]];
+    }
+    
     return YES;
 }
 

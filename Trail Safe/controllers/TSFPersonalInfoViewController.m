@@ -26,10 +26,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    if ([TSFUser isCurrentUserDefined]) {
-        [self segueToCollectEmergencyContactInformation];
-    }
-    
     [super viewWillAppear:animated];
     [self registerKeyboardEvents];
 }
