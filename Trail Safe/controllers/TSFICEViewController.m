@@ -8,6 +8,8 @@
 
 #import "TSFICEViewController.h"
 #import "TSFContact.h"
+#import "TSFServiceProvider.h"
+#import "TSFDevice.h"
 
 @interface TSFICEViewController ()
 
@@ -45,6 +47,8 @@
     
     TSFContact *contact = [[TSFContact alloc] initWithDictionary:contactInfo];
     [TSFContact saveContactAsDefaultContact:contact];
+    
+    [TSFServiceProvider createContact:contact withDevice:[TSFDevice deviceID]];
     
     [self segueBackToHome];
 }

@@ -39,8 +39,9 @@
 }
 
 + (void)createContact:(TSFContact *)contact withDevice:(NSString *)device {
-    NSString *contactURL = [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"contact"];
-    [self postWithURL:contactURL andData:[contact toDictionary]];
+    NSString *contactURL = [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"user/emergency_contact"];
+    NSDictionary *contactData = @{ @"contact" : [contact toDictionary] };
+    [self postWithURL:contactURL andData:contactData];
 }
 
 + (void)createActivity:(TSFActivity *)activity withDevice:(NSString *)device {
