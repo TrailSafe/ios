@@ -66,7 +66,7 @@
 
 + (void)pushLocation:(NSDictionary *)dictionary withDevice:(NSString *)device {
     
-    NSDictionary *locationData = @{@"location": @{ @"data": dictionary}};
+    NSDictionary *locationData = @{@"location":dictionary};
     [self postWithURL:[self updateLocationURLWithDevice:device] andData:locationData];
 }
 
