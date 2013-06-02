@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xne-A4-NNd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xne-A4-NNd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -401,8 +401,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQT-kl-YNu">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="9Jx-eX-8qd"/>
-                                    <constraint firstAttribute="height" constant="55" id="JWq-j9-2Lz"/>
+                                    <constraint firstAttribute="height" constant="61" id="Ees-uV-kfO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="newHike@2x.png">
@@ -418,8 +417,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2v-Eu-cf7">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Sch-bx-Bve"/>
-                                    <constraint firstAttribute="width" constant="268" id="dPm-0g-R3b"/>
+                                    <constraint firstAttribute="width" constant="253" id="b2u-sX-M4l"/>
+                                    <constraint firstAttribute="height" constant="66" id="bXc-KN-aAA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="I Need Help" image="help@2x.png">
@@ -433,13 +432,18 @@
                                     <segue destination="BJ9-02-qrr" kind="push" identifier="callForHelp" id="N1n-5Y-qNE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-wa-vWs"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-wa-vWs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="jvC-ti-PNr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lQT-kl-YNu" firstAttribute="top" secondItem="2Pc-PD-W2t" secondAttribute="top" constant="208" id="14f-qD-rBa"/>
                             <constraint firstItem="g2v-Eu-cf7" firstAttribute="top" secondItem="lQT-kl-YNu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LxS-Ps-VeC"/>
-                            <constraint firstItem="lQT-kl-YNu" firstAttribute="top" secondItem="2Pc-PD-W2t" secondAttribute="top" constant="214" id="Pvx-wc-Mrn"/>
                             <constraint firstItem="mxd-wa-vWs" firstAttribute="top" secondItem="2Pc-PD-W2t" secondAttribute="top" constant="20" symbolic="YES" type="default" id="VDM-Er-vHF"/>
+                            <constraint firstItem="mxd-wa-vWs" firstAttribute="trailing" secondItem="lQT-kl-YNu" secondAttribute="trailing" type="default" id="Wus-IB-xtc"/>
                             <constraint firstItem="mxd-wa-vWs" firstAttribute="centerX" secondItem="2Pc-PD-W2t" secondAttribute="centerX" type="default" id="oUj-AD-fGL"/>
                             <constraint firstItem="g2v-Eu-cf7" firstAttribute="leading" secondItem="2Pc-PD-W2t" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pre-vP-43Z"/>
                             <constraint firstItem="lQT-kl-YNu" firstAttribute="leading" secondItem="2Pc-PD-W2t" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sof-50-0dg"/>
@@ -633,7 +637,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segue destination="BJ9-02-qrr" kind="push" identifier="callForHelp" id="DV0-d0-7Qg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the amount of time you have estimated for your hike." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="285" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-m8-rgl">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the amount of time you have estimated for your hike." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="286" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-m8-rgl">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="D1p-SG-QVy"/>
                                 </constraints>
@@ -677,10 +681,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="backbtn.png" width="50" height="50"/>
         <image name="chooseIce@2x.png" width="309" height="67"/>
         <image name="extra@2x.png" width="309" height="67"/>
-        <image name="help@2x.png" width="349" height="97"/>
+        <image name="help@2x.png" width="347" height="102"/>
         <image name="name@2x.png" width="109" height="36"/>
-        <image name="newHike@2x.png" width="286" height="92"/>
-        <image name="next@2x.png" width="171" height="59"/>
+        <image name="newHike@2x.png" width="285" height="99"/>
+        <image name="next@2x.png" width="163" height="52"/>
         <image name="phonenumber@2x.png" width="247" height="36"/>
         <image name="welcome@2x.png" width="330" height="95"/>
     </resources>
@@ -754,7 +758,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ZAQ-Cl-1Xe"/>
-        <segue reference="GOg-Tb-1x4"/>
-        <segue reference="DV0-d0-7Qg"/>
+        <segue reference="jrU-mS-nWx"/>
+        <segue reference="N1n-5Y-qNE"/>
     </inferredMetricsTieBreakers>
 </document>
