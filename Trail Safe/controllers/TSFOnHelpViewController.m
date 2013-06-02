@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [TSFServiceProvider initiateEmergencyWithDevice:[TSFDevice deviceID]];
+    if (! [TSFServiceProvider hasEmergencyAlreadyBeenInitiatedWithDevice:[TSFDevice deviceID]]) {
+        [TSFServiceProvider initiateEmergencyWithDevice:[TSFDevice deviceID]];
+    }
 }
 
 - (NSString *)callForHelpText {

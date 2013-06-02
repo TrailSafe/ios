@@ -74,6 +74,11 @@
     [self postWithURL:[self initiateEmergencyURLWithDevice:device] andData:@{}];
 }
 
++ (BOOL)hasEmergencyAlreadyBeenInitiatedWithDevice:(NSString *)device {
+    JXHTTPOperation *operation = [self getWithURL:[self initiateEmergencyURLWithDevice:device]];
+    return (operation.responseStatusCode == 200);
+}
+
 #pragma mark - Service Information
 
 + (NSString *)serviceURL {

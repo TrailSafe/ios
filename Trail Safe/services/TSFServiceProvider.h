@@ -26,6 +26,7 @@
 
 + (void)pushLocation:(NSDictionary *)dictionary withDevice:(NSString *)device;
 
++ (BOOL)hasEmergencyAlreadyBeenInitiatedWithDevice:(NSString *)device;
 + (void)initiateEmergencyWithDevice:(NSString *)device;
 
 @end
