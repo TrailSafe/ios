@@ -64,6 +64,12 @@
     [self deleteWithURL:[self currentActivityURLWithDevice:device]];
 }
 
++ (void)pushLocation:(NSDictionary *)dictionary withDevice:(NSString *)device {
+    
+    NSDictionary *locationData = @{@"location": @{ @"data": dictionary}};
+    [self postWithURL:[self updateLocationURLWithDevice:device] andData:locationData];
+}
+
 #pragma mark - Service Information
 
 + (NSString *)serviceURL {
@@ -80,6 +86,10 @@
 
 + currentActivityURLWithDevice:(NSString *)device {
     return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"current_activity"];
+}
+
++ updateLocationURLWithDevice:(NSString *)device {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"locations"];
 }
 
 + (NSString *)apiKey {

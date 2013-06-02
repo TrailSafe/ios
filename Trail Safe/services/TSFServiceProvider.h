@@ -24,4 +24,6 @@
 + (TSFActivity *)currentActivityWithDevice:(NSString *)device;
 + (void)deleteCurrentActivityWithDevice:(NSString *)device;
 
++ (void)pushLocation:(NSDictionary *)dictionary withDevice:(NSString *)device;
+
 @end

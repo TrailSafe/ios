@@ -56,6 +56,11 @@
 
 #pragma mark - Keyboard Events
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
 - (void)keyboardDidShow:(NSNotification *)notification {
     __block UIView *mainView = self.view;
     

@@ -62,7 +62,7 @@
     __block UIView *mainView = self.view;
     
     [UIView animateWithDuration:0.2 animations:^{
-        [mainView setFrame:CGRectMake(0,-120,320,460)];
+        [mainView setFrame:CGRectMake(0,-130,320,460)];
     }];
     
 }

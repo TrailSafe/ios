@@ -9,13 +9,16 @@
 #import "TSFAppDelegate.h"
 #import "TSFDevice.h"
 #import "TSFServiceProvider.h"
+#import "TSFLocationService.h"
 
 @implementation TSFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self generateUniqueID];
     
-    if (! [TSFServiceProvider doesUserExistsWithDevice:[TSFDevice deviceID]]) {
+    [self generateUniqueID];
+    [self configureLocationServices];
+    
+    if (! [TSFServiceProvider doesUserExistsWithDevice:[TSFDevice deviceID]] && [[TSFUser currentUser] name]) {
         [TSFServiceProvider createUser:[TSFUser currentUser] withDevice:[TSFDevice deviceID]];
     }
     
@@ -26,6 +29,13 @@
 
 - (void)generateUniqueID {
     NSLog(@"%@",[TSFDevice deviceID]);
+}
+
+
+#pragma mark - Location Services
+
+- (void)configureLocationServices {
+    [[TSFLocationService location] startUpdatingLocation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
