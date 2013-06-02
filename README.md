@@ -5,8 +5,7 @@ safe.
 
 > When you start your hike you estimate your travel time.
 > When you fail to meet your checkin time Trail Safe will
-> contact you, shortly afteryour emergency contact, and
-> finally Park Rangers.
+> contact you, your emergency contact, and Park Rangers.
 
 ![home](screen_shots/TS1-Home.png)
 ![info](screen_shots/TS2-Info.png)
