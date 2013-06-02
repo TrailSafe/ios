@@ -20,7 +20,8 @@
 
 + (void)createContact:(TSFContact *)contact withDevice:(NSString *)device;
 
-+ (TSFActivity *)currentActivityWithDevice:(NSString *)device;
 + (void)createActivity:(TSFActivity *)activity withDevice:(NSString *)device;
++ (TSFActivity *)currentActivityWithDevice:(NSString *)device;
++ (void)deleteCurrentActivityWithDevice:(NSString *)device;
 
 @end

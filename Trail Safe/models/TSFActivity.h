@@ -17,6 +17,7 @@
 @property (nonatomic,retain) NSDictionary *returnAreaData;
 
 - (NSNumber *)duration;
+- (NSNumber *)durationInSeconds;
 
 - (NSDictionary *)toDictionary;
 

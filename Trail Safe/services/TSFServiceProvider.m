@@ -7,6 +7,7 @@
 //
 
 #import "TSFServiceProvider.h"
+#import "JXHTTP.h"
 
 @interface TSFServiceProvider ()
 
@@ -25,7 +26,6 @@
 }
 
 + (BOOL)doesUserExistsWithDevice:(NSString *)device {
-    
     JXHTTPOperation *response = [self getWithURL:[self userURLWithDevice:device]];
     return ([response responseStatusCode] == 200);
 }
@@ -47,27 +47,22 @@
     [self postWithURL:[self activityURLWithDevice:device] andData:[activity toDictionary]];
 }
 
-//{
-//       "activity": {
-//               "id": "f023618b-67ad-4a1c-a514-d279582397a6",
-//               "name": "TSF Test",
-//               "time_remaining": 7199,
-//               "completed": null,
-//               "end_time": "2013-06-02T05:23:58.248Z"
-//           }
-//}
 + (TSFActivity *)currentActivityWithDevice:(NSString *)device {
     JXHTTPOperation *operation = [self getWithURL:[self currentActivityURLWithDevice:device]];
     
     TSFActivity *activity = nil;
     
     if ([operation responseStatusCode] == 200) {
-        activity = [[TSFActivity alloc] initWithDictionary:[operation responseJSON]];
+        NSDictionary *activityData = [[operation responseJSON] objectForKey:@"activity"];
+        activity = [[TSFActivity alloc] initWithDictionary:activityData];
     }
     
     return activity;
 }
 
++ (void)deleteCurrentActivityWithDevice:(NSString *)device {
+    [self deleteWithURL:[self currentActivityURLWithDevice:device]];
+}
 
 #pragma mark - Service Information
 
@@ -76,7 +71,7 @@
 }
 
 + (NSString *)activityURLWithDevice:device {
-    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"activities"];
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"user/activities"];
 }
 
 + (NSString *)userURLWithDevice:(NSString *)device {
@@ -105,7 +100,9 @@
     operation.requestHeaders = @{@"Authorization": [self apiKey] };
 
     [operation startAndWaitUntilFinished];
-    
+
+    NSLog(@"Response %d",[operation responseStatusCode]);
+
     return operation;
 }
 
@@ -117,6 +114,22 @@
     operation.requestHeaders = @{@"Authorization": [self apiKey] };
     
     [operation startAndWaitUntilFinished];
+ 
+   NSLog(@"Response %d",[operation responseStatusCode]);
+    
+    return operation;
+}
+
++ (JXHTTPOperation *)deleteWithURL:(NSString *)url {
+    NSLog(@"DELETE %@",url);
+    
+    JXHTTPOperation *operation = [[JXHTTPOperation alloc] initWithURL:[NSURL URLWithString:url]];
+    [operation.request setHTTPMethod:@"DELETE"];
+    operation.requestHeaders = @{@"Authorization": [self apiKey] };
+    
+    [operation startAndWaitUntilFinished];
+    
+    NSLog(@"Response %d",[operation responseStatusCode]);
     
     return operation;
 }

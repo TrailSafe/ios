@@ -8,7 +8,8 @@
 
 #import "TSFOnHikeViewController.h"
 #import "JDDateCountdownFlipView.h"
-
+#import "TSFServiceProvider.h"
+#import "TSFDevice.h"
 
 @interface TSFOnHikeViewController ()
 
@@ -18,21 +19,16 @@
 
 @implementation TSFOnHikeViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     self.countdownTimer = [self createCountdownTimer];
-    
     [self.view addSubview:self.countdownTimer];
 }
 
 - (NSDate *)countdownToDate {
-    NSDateComponents *currentComps = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:[NSDate date]];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat: @"dd.MM.yy HH:mm"];
-    return [dateFormatter dateFromString:[NSString stringWithFormat: @"01.01.%d 00:00", currentComps.year + 1]];
+    
+    TSFActivity *currentActivity = [TSFServiceProvider currentActivityWithDevice:[TSFDevice deviceID]];
+    return [NSDate dateWithTimeIntervalSinceNow:[[currentActivity durationInSeconds] intValue]];
 }
 
 #pragma mark - Countdown Timer
@@ -48,4 +44,8 @@
 }
 
 
+- (IBAction)finishHike:(id)sender {
+    [TSFServiceProvider deleteCurrentActivityWithDevice:[TSFDevice deviceID]];
+    [self performSegueWithIdentifier:@"finishHike" sender:self];
+}
 @end

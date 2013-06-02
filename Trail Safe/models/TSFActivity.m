@@ -37,6 +37,10 @@
     return self;
 }
 
+- (NSNumber *)durationInSeconds {
+    return self.timeRemaining;
+}
+
 - (NSNumber *)duration {
     return [NSNumber numberWithInt:[self.timeRemaining intValue] / 60];
 }

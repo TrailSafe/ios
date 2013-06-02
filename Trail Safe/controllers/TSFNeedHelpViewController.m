@@ -26,7 +26,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
+    
     [self.countdownTimer animateToValue:0 duration:10 completion:^(BOOL finished) {
         if (finished) {
             [self performSegueWithIdentifier:@"needHelpNow" sender:self];

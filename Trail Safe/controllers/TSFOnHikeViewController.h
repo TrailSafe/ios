@@ -11,4 +11,6 @@
 
 @interface TSFOnHikeViewController : UIViewController
 
+- (IBAction)finishHike:(id)sender;
+
 @end

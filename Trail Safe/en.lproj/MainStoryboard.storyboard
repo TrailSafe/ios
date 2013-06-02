@@ -452,6 +452,7 @@
                     <navigationItem key="navigationItem" id="6hl-R9-WBm"/>
                     <connections>
                         <segue destination="2" kind="push" identifier="gatherPersonalInformation" id="tzx-G5-NCt"/>
+                        <segue destination="8f9-1p-uJS" kind="push" identifier="resumeHike" id="jrU-mS-nWx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lx-WH-nLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -596,7 +597,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3m2-dh-qCp" kind="custom" customClass="TSFBackToHomeSegue" id="PTT-UN-lNX"/>
+                                    <action selector="finishHike:" destination="8f9-1p-uJS" eventType="touchUpInside" id="BXZ-u7-Osf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-fJ-0IX">
@@ -640,10 +641,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="7s6-41-vdK"/>
+                    <connections>
+                        <segue destination="3m2-dh-qCp" kind="custom" identifier="finishHike" customClass="TSFBackToHomeSegue" id="0gl-TP-kmi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="972-4x-ohq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="1100"/>
+            <point key="canvasLocation" x="1443" y="1282"/>
         </scene>
     </scenes>
     <resources>
@@ -696,6 +700,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="TSFOnHikeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TSFOnHikeViewController.h"/>
             <relationships>
+                <relationship kind="action" name="finishHike:"/>
                 <relationship kind="outlet" name="countdownTimer" candidateClass="JDDateCountdownFlipView"/>
             </relationships>
         </class>
@@ -726,7 +731,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aOx-rx-8wn"/>
+        <segue reference="0gl-TP-kmi"/>
+        <segue reference="jrU-mS-nWx"/>
         <segue reference="N1n-5Y-qNE"/>
     </inferredMetricsTieBreakers>
 </document>

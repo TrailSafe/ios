@@ -8,6 +8,8 @@
 
 #import "TSFHomeViewController.h"
 #import "TSFUser.h"
+#import "TSFServiceProvider.h"
+#import "TSFDevice.h"
 
 @interface TSFHomeViewController ()
 
@@ -21,11 +23,19 @@
     if (! [TSFUser isCurrentUserDefined]) {
         [self segueToGatherPersonalInformation];
     }
+    
+    if ( [TSFServiceProvider currentActivityWithDevice:[TSFDevice deviceID]]) {
+        [self segueToOnHike];
+    }
 
 }
 
 - (void)segueToGatherPersonalInformation {
     [self performSegueWithIdentifier:@"gatherPersonalInformation" sender:self];
+}
+
+- (void)segueToOnHike {
+    [self performSegueWithIdentifier:@"resumeHike" sender:self];
 }
 
 @end
