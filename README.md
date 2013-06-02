@@ -8,7 +8,7 @@ safe.
 > contact you, shortly afteryour emergency contact, and
 > finally Park Rangers.
 
-[home](screen_shots/TS1-Home.png)
-[info](screen_shots/TS2-Info.png)
-[return](screen_shots/TS7-ReturnTime.png)
-[help](screen_shots/TS9-HELP.png)
+![home](screen_shots/TS1-Home.png)
+![info](screen_shots/TS2-Info.png)
+![return](screen_shots/TS7-ReturnTime.png)
+![help](screen_shots/TS9-HELP.png)
