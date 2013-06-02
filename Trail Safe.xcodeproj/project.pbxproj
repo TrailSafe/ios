@@ -50,6 +50,18 @@
 		E2CCA3E6175ABC63006E599D /* TSFDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3E5175ABC63006E599D /* TSFDevice.m */; };
 		E2CCA3E9175ABEB0006E599D /* TSFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3E8175ABEB0006E599D /* TSFUser.m */; };
 		E2CCA3EC175AC4B3006E599D /* TSFContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3EB175AC4B3006E599D /* TSFContact.m */; };
+		E2CCA408175AD263006E599D /* JXHTTPDataBody.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3F0175AD263006E599D /* JXHTTPDataBody.m */; };
+		E2CCA409175AD263006E599D /* JXHTTPFileBody.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3F2175AD263006E599D /* JXHTTPFileBody.m */; };
+		E2CCA40A175AD263006E599D /* JXHTTPFormEncodedBody.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3F4175AD263006E599D /* JXHTTPFormEncodedBody.m */; };
+		E2CCA40B175AD263006E599D /* JXHTTPJSONBody.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3F6175AD263006E599D /* JXHTTPJSONBody.m */; };
+		E2CCA40C175AD263006E599D /* JXHTTPMultipartBody.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3F8175AD263006E599D /* JXHTTPMultipartBody.m */; };
+		E2CCA40D175AD263006E599D /* JXHTTPOperation+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3FA175AD263006E599D /* JXHTTPOperation+Convenience.m */; };
+		E2CCA40E175AD263006E599D /* JXHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3FC175AD263006E599D /* JXHTTPOperation.m */; };
+		E2CCA40F175AD263006E599D /* JXHTTPOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3FF175AD263006E599D /* JXHTTPOperationQueue.m */; };
+		E2CCA410175AD263006E599D /* JXOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA403175AD263006E599D /* JXOperation.m */; };
+		E2CCA411175AD263006E599D /* JXURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA405175AD263006E599D /* JXURLConnectionOperation.m */; };
+		E2CCA412175AD263006E599D /* JXURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA407175AD263006E599D /* JXURLEncoding.m */; };
+		E2CCA416175AD2CC006E599D /* TSFServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA415175AD2CC006E599D /* TSFServiceProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +128,34 @@
 		E2CCA3E8175ABEB0006E599D /* TSFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFUser.m; path = models/TSFUser.m; sourceTree = "<group>"; };
 		E2CCA3EA175AC4B3006E599D /* TSFContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFContact.h; path = models/TSFContact.h; sourceTree = "<group>"; };
 		E2CCA3EB175AC4B3006E599D /* TSFContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFContact.m; path = models/TSFContact.m; sourceTree = "<group>"; };
+		E2CCA3EE175AD263006E599D /* JXHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTP.h; sourceTree = "<group>"; };
+		E2CCA3EF175AD263006E599D /* JXHTTPDataBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPDataBody.h; sourceTree = "<group>"; };
+		E2CCA3F0175AD263006E599D /* JXHTTPDataBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPDataBody.m; sourceTree = "<group>"; };
+		E2CCA3F1175AD263006E599D /* JXHTTPFileBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPFileBody.h; sourceTree = "<group>"; };
+		E2CCA3F2175AD263006E599D /* JXHTTPFileBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPFileBody.m; sourceTree = "<group>"; };
+		E2CCA3F3175AD263006E599D /* JXHTTPFormEncodedBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPFormEncodedBody.h; sourceTree = "<group>"; };
+		E2CCA3F4175AD263006E599D /* JXHTTPFormEncodedBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPFormEncodedBody.m; sourceTree = "<group>"; };
+		E2CCA3F5175AD263006E599D /* JXHTTPJSONBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPJSONBody.h; sourceTree = "<group>"; };
+		E2CCA3F6175AD263006E599D /* JXHTTPJSONBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPJSONBody.m; sourceTree = "<group>"; };
+		E2CCA3F7175AD263006E599D /* JXHTTPMultipartBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPMultipartBody.h; sourceTree = "<group>"; };
+		E2CCA3F8175AD263006E599D /* JXHTTPMultipartBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPMultipartBody.m; sourceTree = "<group>"; };
+		E2CCA3F9175AD263006E599D /* JXHTTPOperation+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JXHTTPOperation+Convenience.h"; sourceTree = "<group>"; };
+		E2CCA3FA175AD263006E599D /* JXHTTPOperation+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JXHTTPOperation+Convenience.m"; sourceTree = "<group>"; };
+		E2CCA3FB175AD263006E599D /* JXHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPOperation.h; sourceTree = "<group>"; };
+		E2CCA3FC175AD263006E599D /* JXHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPOperation.m; sourceTree = "<group>"; };
+		E2CCA3FD175AD263006E599D /* JXHTTPOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPOperationDelegate.h; sourceTree = "<group>"; };
+		E2CCA3FE175AD263006E599D /* JXHTTPOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPOperationQueue.h; sourceTree = "<group>"; };
+		E2CCA3FF175AD263006E599D /* JXHTTPOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXHTTPOperationQueue.m; sourceTree = "<group>"; };
+		E2CCA400175AD263006E599D /* JXHTTPOperationQueueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPOperationQueueDelegate.h; sourceTree = "<group>"; };
+		E2CCA401175AD263006E599D /* JXHTTPRequestBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXHTTPRequestBody.h; sourceTree = "<group>"; };
+		E2CCA402175AD263006E599D /* JXOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXOperation.h; sourceTree = "<group>"; };
+		E2CCA403175AD263006E599D /* JXOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXOperation.m; sourceTree = "<group>"; };
+		E2CCA404175AD263006E599D /* JXURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXURLConnectionOperation.h; sourceTree = "<group>"; };
+		E2CCA405175AD263006E599D /* JXURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXURLConnectionOperation.m; sourceTree = "<group>"; };
+		E2CCA406175AD263006E599D /* JXURLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXURLEncoding.h; sourceTree = "<group>"; };
+		E2CCA407175AD263006E599D /* JXURLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXURLEncoding.m; sourceTree = "<group>"; };
+		E2CCA414175AD2CC006E599D /* TSFServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFServiceProvider.h; path = services/TSFServiceProvider.h; sourceTree = "<group>"; };
+		E2CCA415175AD2CC006E599D /* TSFServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFServiceProvider.m; path = services/TSFServiceProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +207,7 @@
 		E29D290C175A4E8900594292 /* Trail Safe */ = {
 			isa = PBXGroup;
 			children = (
+				E2CCA413175AD2B7006E599D /* services */,
 				E29D293F175A5EB300594292 /* models */,
 				E29D292E175A531800594292 /* controllers */,
 				E29D292B175A4F6400594292 /* resources */,
@@ -254,6 +295,7 @@
 		E2B8B145175A7E7300F98E09 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E2CCA3ED175AD263006E599D /* JXHTTP */,
 				E2B8B146175A7E8400F98E09 /* JDFlipNumberView */,
 			);
 			name = Vendor;
@@ -274,6 +316,48 @@
 				E2B8B14F175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m */,
 			);
 			path = JDFlipNumberView;
+			sourceTree = "<group>";
+		};
+		E2CCA3ED175AD263006E599D /* JXHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				E2CCA3EE175AD263006E599D /* JXHTTP.h */,
+				E2CCA3EF175AD263006E599D /* JXHTTPDataBody.h */,
+				E2CCA3F0175AD263006E599D /* JXHTTPDataBody.m */,
+				E2CCA3F1175AD263006E599D /* JXHTTPFileBody.h */,
+				E2CCA3F2175AD263006E599D /* JXHTTPFileBody.m */,
+				E2CCA3F3175AD263006E599D /* JXHTTPFormEncodedBody.h */,
+				E2CCA3F4175AD263006E599D /* JXHTTPFormEncodedBody.m */,
+				E2CCA3F5175AD263006E599D /* JXHTTPJSONBody.h */,
+				E2CCA3F6175AD263006E599D /* JXHTTPJSONBody.m */,
+				E2CCA3F7175AD263006E599D /* JXHTTPMultipartBody.h */,
+				E2CCA3F8175AD263006E599D /* JXHTTPMultipartBody.m */,
+				E2CCA3F9175AD263006E599D /* JXHTTPOperation+Convenience.h */,
+				E2CCA3FA175AD263006E599D /* JXHTTPOperation+Convenience.m */,
+				E2CCA3FB175AD263006E599D /* JXHTTPOperation.h */,
+				E2CCA3FC175AD263006E599D /* JXHTTPOperation.m */,
+				E2CCA3FD175AD263006E599D /* JXHTTPOperationDelegate.h */,
+				E2CCA3FE175AD263006E599D /* JXHTTPOperationQueue.h */,
+				E2CCA3FF175AD263006E599D /* JXHTTPOperationQueue.m */,
+				E2CCA400175AD263006E599D /* JXHTTPOperationQueueDelegate.h */,
+				E2CCA401175AD263006E599D /* JXHTTPRequestBody.h */,
+				E2CCA402175AD263006E599D /* JXOperation.h */,
+				E2CCA403175AD263006E599D /* JXOperation.m */,
+				E2CCA404175AD263006E599D /* JXURLConnectionOperation.h */,
+				E2CCA405175AD263006E599D /* JXURLConnectionOperation.m */,
+				E2CCA406175AD263006E599D /* JXURLEncoding.h */,
+				E2CCA407175AD263006E599D /* JXURLEncoding.m */,
+			);
+			path = JXHTTP;
+			sourceTree = "<group>";
+		};
+		E2CCA413175AD2B7006E599D /* services */ = {
+			isa = PBXGroup;
+			children = (
+				E2CCA414175AD2CC006E599D /* TSFServiceProvider.h */,
+				E2CCA415175AD2CC006E599D /* TSFServiceProvider.m */,
+			);
+			name = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +460,18 @@
 				E2CCA3E6175ABC63006E599D /* TSFDevice.m in Sources */,
 				E2CCA3E9175ABEB0006E599D /* TSFUser.m in Sources */,
 				E2CCA3EC175AC4B3006E599D /* TSFContact.m in Sources */,
+				E2CCA408175AD263006E599D /* JXHTTPDataBody.m in Sources */,
+				E2CCA409175AD263006E599D /* JXHTTPFileBody.m in Sources */,
+				E2CCA40A175AD263006E599D /* JXHTTPFormEncodedBody.m in Sources */,
+				E2CCA40B175AD263006E599D /* JXHTTPJSONBody.m in Sources */,
+				E2CCA40C175AD263006E599D /* JXHTTPMultipartBody.m in Sources */,
+				E2CCA40D175AD263006E599D /* JXHTTPOperation+Convenience.m in Sources */,
+				E2CCA40E175AD263006E599D /* JXHTTPOperation.m in Sources */,
+				E2CCA40F175AD263006E599D /* JXHTTPOperationQueue.m in Sources */,
+				E2CCA410175AD263006E599D /* JXOperation.m in Sources */,
+				E2CCA411175AD263006E599D /* JXURLConnectionOperation.m in Sources */,
+				E2CCA412175AD263006E599D /* JXURLEncoding.m in Sources */,
+				E2CCA416175AD2CC006E599D /* TSFServiceProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

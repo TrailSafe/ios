@@ -8,11 +8,14 @@
 
 #import "TSFAppDelegate.h"
 #import "TSFDevice.h"
+#import "TSFServiceProvider.h"
 
 @implementation TSFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self generateUniqueID];
+    
+    [TSFServiceProvider createUser:[TSFUser currentUser] withDevice:[TSFDevice deviceID]];
     return YES;
 }
 
