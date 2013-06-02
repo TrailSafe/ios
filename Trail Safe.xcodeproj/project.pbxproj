@@ -47,6 +47,9 @@
 		E2B8B153175A7E8400F98E09 /* JDFlipNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B8B14D175A7E8400F98E09 /* JDFlipNumberView.m */; };
 		E2B8B154175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B8B14F175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m */; };
 		E2B8B156175A7F2B00F98E09 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B8B155175A7F2B00F98E09 /* QuartzCore.framework */; };
+		E2CCA3E6175ABC63006E599D /* TSFDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3E5175ABC63006E599D /* TSFDevice.m */; };
+		E2CCA3E9175ABEB0006E599D /* TSFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3E8175ABEB0006E599D /* TSFUser.m */; };
+		E2CCA3EC175AC4B3006E599D /* TSFContact.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CCA3EB175AC4B3006E599D /* TSFContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,12 @@
 		E2B8B14E175A7E8400F98E09 /* JDFlipNumberViewImageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFlipNumberViewImageFactory.h; sourceTree = "<group>"; };
 		E2B8B14F175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFlipNumberViewImageFactory.m; sourceTree = "<group>"; };
 		E2B8B155175A7F2B00F98E09 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E2CCA3E4175ABC63006E599D /* TSFDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFDevice.h; path = models/TSFDevice.h; sourceTree = "<group>"; };
+		E2CCA3E5175ABC63006E599D /* TSFDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFDevice.m; path = models/TSFDevice.m; sourceTree = "<group>"; };
+		E2CCA3E7175ABEB0006E599D /* TSFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFUser.h; path = models/TSFUser.h; sourceTree = "<group>"; };
+		E2CCA3E8175ABEB0006E599D /* TSFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFUser.m; path = models/TSFUser.m; sourceTree = "<group>"; };
+		E2CCA3EA175AC4B3006E599D /* TSFContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFContact.h; path = models/TSFContact.h; sourceTree = "<group>"; };
+		E2CCA3EB175AC4B3006E599D /* TSFContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFContact.m; path = models/TSFContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +241,12 @@
 			children = (
 				E29D2940175A5EE100594292 /* TSFBackToHomeSegue.h */,
 				E29D2941175A5EE100594292 /* TSFBackToHomeSegue.m */,
+				E2CCA3E4175ABC63006E599D /* TSFDevice.h */,
+				E2CCA3E5175ABC63006E599D /* TSFDevice.m */,
+				E2CCA3E7175ABEB0006E599D /* TSFUser.h */,
+				E2CCA3E8175ABEB0006E599D /* TSFUser.m */,
+				E2CCA3EA175AC4B3006E599D /* TSFContact.h */,
+				E2CCA3EB175AC4B3006E599D /* TSFContact.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -358,6 +373,9 @@
 				E2B8B151175A7E8400F98E09 /* JDFlipNumberDigitView.m in Sources */,
 				E2B8B153175A7E8400F98E09 /* JDFlipNumberView.m in Sources */,
 				E2B8B154175A7E8400F98E09 /* JDFlipNumberViewImageFactory.m in Sources */,
+				E2CCA3E6175ABC63006E599D /* TSFDevice.m in Sources */,
+				E2CCA3E9175ABEB0006E599D /* TSFUser.m in Sources */,
+				E2CCA3EC175AC4B3006E599D /* TSFContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

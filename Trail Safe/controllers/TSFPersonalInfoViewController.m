@@ -7,6 +7,7 @@
 //
 
 #import "TSFPersonalInfoViewController.h"
+#import "TSFUser.h"
 
 @interface TSFPersonalInfoViewController ()
 
@@ -25,6 +26,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    if ([TSFUser isCurrentUserDefined]) {
+        [self segueToCollectEmergencyContactInformation];
+    }
+    
     [super viewWillAppear:animated];
     [self registerKeyboardEvents];
 }
@@ -34,7 +39,19 @@
     [self unregisterKeyboardEvents];
 }
 
+#pragma mark - Events
+
 - (IBAction)submitData:(id)sender {
+    
+    NSDictionary *userInfo = @{@"name":self.nameField.text,@"phoneNumber":self.phoneField.text};
+    
+    TSFUser *user = [[TSFUser alloc] initWithDictionary:userInfo];
+    [TSFUser saveUserAsCurrentUser:user];
+    
+    [self segueToCollectEmergencyContactInformation];
+}
+
+- (void)segueToCollectEmergencyContactInformation {
     [self performSegueWithIdentifier:@"InCaseOfEmergencyInfo" sender:self];
 }
 

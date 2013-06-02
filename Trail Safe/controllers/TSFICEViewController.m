@@ -7,6 +7,7 @@
 //
 
 #import "TSFICEViewController.h"
+#import "TSFContact.h"
 
 @interface TSFICEViewController ()
 
@@ -25,6 +26,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    if ([TSFContact isDefaultContactDefined]) {
+        [self segueBackToHome];
+    }
+    
     [super viewWillAppear:animated];
     [self registerKeyboardEvents];
 }
@@ -35,7 +40,18 @@
 }
 
 - (IBAction)submitData:(id)sender {
+    
+    NSDictionary *contactInfo = @{@"name":self.nameField.text,@"phoneNumber":self.phoneField.text};
+    
+    TSFContact *contact = [[TSFContact alloc] initWithDictionary:contactInfo];
+    [TSFContact saveContactAsDefaultContact:contact];
+    
+    [self segueBackToHome];
+}
+
+- (void)segueBackToHome {
     [self performSegueWithIdentifier:@"backToHome" sender:self];
+
 }
 
 #pragma mark - Keyboard Events
