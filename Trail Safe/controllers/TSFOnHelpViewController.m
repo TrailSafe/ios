@@ -7,6 +7,8 @@
 //
 
 #import "TSFOnHelpViewController.h"
+#import "TSFServiceProvider.h"
+#import "TSFDevice.h"
 
 @interface TSFOnHelpViewController ()
 
@@ -14,6 +16,10 @@
 
 @implementation TSFOnHelpViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [TSFServiceProvider initiateEmergencyWithDevice:[TSFDevice deviceID]];
+}
 
 - (NSString *)callForHelpText {
     return @"Cancel Call For Help";

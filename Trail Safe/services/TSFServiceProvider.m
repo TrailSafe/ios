@@ -70,6 +70,10 @@
     [self postWithURL:[self updateLocationURLWithDevice:device] andData:locationData];
 }
 
++ (void)initiateEmergencyWithDevice:(NSString *)device {
+    [self postWithURL:[self initiateEmergencyURLWithDevice:device] andData:@{}];
+}
+
 #pragma mark - Service Information
 
 + (NSString *)serviceURL {
@@ -84,12 +88,16 @@
     return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"user"];
 }
 
-+ currentActivityURLWithDevice:(NSString *)device {
++ (NSString *)currentActivityURLWithDevice:(NSString *)device {
     return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"current_activity"];
 }
 
-+ updateLocationURLWithDevice:(NSString *)device {
++ (NSString *)updateLocationURLWithDevice:(NSString *)device {
     return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"locations"];
+}
+
++ (NSString *)initiateEmergencyURLWithDevice:(NSString *)device {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"help_request"];
 }
 
 + (NSString *)apiKey {
