@@ -8,6 +8,7 @@
 
 #import "TSFOnHelpViewController.h"
 #import "TSFServiceProvider.h"
+#import "TSFLocationService.h"
 
 @interface TSFOnHelpViewController ()
 
@@ -22,6 +23,13 @@
     if (! [provider hasEmergencyAlreadyBeenInitiated]) {
         [provider initiateEmergency];
     }
+    
+    [[TSFLocationService location] startUpdatingLocation];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[TSFLocationService location] stopUpdatingLocation];
 }
 
 - (NSString *)callForHelpText {
