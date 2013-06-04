@@ -24,7 +24,8 @@
         [self segueToGatherPersonalInformation];
     }
     
-    if ( [TSFServiceProvider currentActivityWithDevice:[TSFDevice deviceID]]) {
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];    
+    if ([provider currentActivity]) {
         [self segueToOnHike];
     }
 

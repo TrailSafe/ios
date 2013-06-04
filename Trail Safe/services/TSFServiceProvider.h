@@ -14,19 +14,18 @@
 @interface TSFServiceProvider : NSObject
 
 - (id)initWithDevice:(NSString *)device;
+- (BOOL)doesUserExists;
+- (void)createUser:(TSFUser *)user;
 
-+ (BOOL)doesUserExistsWithDevice:(NSString *)device;
-+ (void)createUser:(TSFUser *)user withDevice:(NSString *)device;
+- (void)createContact:(TSFContact *)contact;
 
-+ (void)createContact:(TSFContact *)contact withDevice:(NSString *)device;
+- (void)createActivity:(TSFActivity *)activity;
+- (TSFActivity *)currentActivity;
+- (void)deleteCurrentActivity;
 
-+ (void)createActivity:(TSFActivity *)activity withDevice:(NSString *)device;
-+ (TSFActivity *)currentActivityWithDevice:(NSString *)device;
-+ (void)deleteCurrentActivityWithDevice:(NSString *)device;
+- (void)pushLocation:(NSDictionary *)dictionary;
 
-+ (void)pushLocation:(NSDictionary *)dictionary withDevice:(NSString *)device;
-
-+ (BOOL)hasEmergencyAlreadyBeenInitiatedWithDevice:(NSString *)device;
-+ (void)initiateEmergencyWithDevice:(NSString *)device;
+- (BOOL)hasEmergencyAlreadyBeenInitiated;
+- (void)initiateEmergency;
 
 @end

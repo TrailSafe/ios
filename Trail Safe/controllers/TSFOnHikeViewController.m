@@ -27,7 +27,8 @@
 
 - (NSDate *)countdownToDate {
     
-    TSFActivity *currentActivity = [TSFServiceProvider currentActivityWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFActivity *currentActivity = [provider currentActivity];
     return [NSDate dateWithTimeIntervalSinceNow:[[currentActivity durationInSeconds] intValue]];
 }
 
@@ -45,7 +46,8 @@
 
 
 - (IBAction)finishHike:(id)sender {
-    [TSFServiceProvider deleteCurrentActivityWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    [provider deleteCurrentActivity];
     [self performSegueWithIdentifier:@"finishHike" sender:self];
 }
 @end

@@ -46,7 +46,8 @@
     TSFUser *user = [[TSFUser alloc] initWithDictionary:userInfo];
     [TSFUser saveUserAsCurrentUser:user];
     
-    [TSFServiceProvider createUser:user withDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    [provider createUser:user];
     
     [self segueToCollectEmergencyContactInformation];
 }

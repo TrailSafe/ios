@@ -18,8 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (! [TSFServiceProvider hasEmergencyAlreadyBeenInitiatedWithDevice:[TSFDevice deviceID]]) {
-        [TSFServiceProvider initiateEmergencyWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+
+    if (! [provider hasEmergencyAlreadyBeenInitiated]) {
+        [provider initiateEmergency];
     }
 }
 

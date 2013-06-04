@@ -18,8 +18,10 @@
     [self generateUniqueID];
     [self configureLocationServices];
     
-    if (! [TSFServiceProvider doesUserExistsWithDevice:[TSFDevice deviceID]] && [[TSFUser currentUser] name]) {
-        [TSFServiceProvider createUser:[TSFUser currentUser] withDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    
+    if (! [provider doesUserExists] && [[TSFUser currentUser] name]) {
+        [provider createUser:[TSFUser currentUser]];
     }
     
     return YES;

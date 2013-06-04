@@ -68,7 +68,8 @@
         
         NSDictionary *coordinate = @{@"lat": [NSNumber numberWithDouble:location.coordinate.latitude], @"lng": [NSNumber numberWithDouble:location.coordinate.longitude] };
         
-        [TSFServiceProvider pushLocation:coordinate withDevice:[TSFDevice deviceID]];
+        TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+        [provider pushLocation:coordinate];
 
     }];
     

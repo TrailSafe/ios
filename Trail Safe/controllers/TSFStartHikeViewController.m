@@ -30,9 +30,10 @@
 }
 
 - (IBAction)startHike:(id)sender {
-    
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+
     TSFActivity *activity = [[TSFActivity alloc] initWithDictionary:@{@"name": @"Solo Hike", @"time_remaining": self.lastSelectedHikeTime }];
-    [TSFServiceProvider createActivity:activity withDevice:[TSFDevice deviceID]];
+    [provider createActivity:activity];
     
     [self performSegueToOnHike];
 }

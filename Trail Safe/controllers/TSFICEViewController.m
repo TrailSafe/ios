@@ -48,7 +48,8 @@
     TSFContact *contact = [[TSFContact alloc] initWithDictionary:contactInfo];
     [TSFContact saveContactAsDefaultContact:contact];
     
-    [TSFServiceProvider createContact:contact withDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    [provider createContact:contact];
     
     [self segueBackToHome];
 }
