@@ -8,14 +8,12 @@
 
 #import "TSFAppDelegate.h"
 #import "TSFServiceProvider.h"
-#import "TSFLocationService.h"
 
 @implementation TSFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self generateUniqueID];
-    [self configureLocationServices];
     
     TSFServiceProvider *provider = [TSFServiceProvider provider];
     
@@ -35,9 +33,6 @@
 
 #pragma mark - Location Services
 
-- (void)configureLocationServices {
-    [[TSFLocationService location] startUpdatingLocation];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

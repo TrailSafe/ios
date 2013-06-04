@@ -9,6 +9,7 @@
 #import "TSFStartHikeViewController.h"
 #import "TSFActivity.h"
 #import "TSFServiceProvider.h"
+#import "TSFLocationService.h"
 
 @interface TSFStartHikeViewController ()
 
@@ -34,6 +35,7 @@
     TSFActivity *activity = [[TSFActivity alloc] initWithDictionary:@{@"name": @"Solo Hike", @"time_remaining": self.lastSelectedHikeTime }];
     [provider createActivity:activity];
     
+    [[TSFLocationService location] startUpdatingLocation];
     [self performSegueToOnHike];
 }
 

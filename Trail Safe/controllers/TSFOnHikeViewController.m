@@ -9,6 +9,7 @@
 #import "TSFOnHikeViewController.h"
 #import "JDDateCountdownFlipView.h"
 #import "TSFServiceProvider.h"
+#import "TSFLocationService.h"
 
 @interface TSFOnHikeViewController ()
 
@@ -47,6 +48,7 @@
 - (IBAction)finishHike:(id)sender {
     TSFServiceProvider *provider = [TSFServiceProvider provider];
     [provider deleteCurrentActivity];
+    [[TSFLocationService location] stopUpdatingLocation];
     [self performSegueWithIdentifier:@"finishHike" sender:self];
 }
 @end

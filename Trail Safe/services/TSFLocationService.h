@@ -13,5 +13,6 @@
 
 + (id)location;
 - (void)startUpdatingLocation;
+- (void)stopUpdatingLocation;
 
 @end

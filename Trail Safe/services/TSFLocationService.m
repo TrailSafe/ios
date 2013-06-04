@@ -47,6 +47,10 @@
     [self.locationManager startUpdatingLocation];
 }
 
+- (void)stopUpdatingLocation {
+    [self.locationManager stopUpdatingLocation];
+}
+
 #pragma mark - CCLocationManagerDelegate Adherance
 
 /*
