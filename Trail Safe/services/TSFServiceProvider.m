@@ -26,7 +26,7 @@
 }
 
 - (BOOL)doesUserExists {
-    JXHTTPOperation *response = [self getWithURL:[self userURLWithDevice:self.device]];
+    JXHTTPOperation *response = [self getWithURL:[self userURL]];
     return ([response responseStatusCode] == 200);
 }
 
@@ -35,21 +35,21 @@
                                            @"last_name" : @"",
                                            @"phone_number" : user.phoneNumber } };
 
-    [self postWithURL:[self userURLWithDevice:self.device] andData:userData];
+    [self postWithURL:[self userURL] andData:userData];
 }
 
 - (void)createContact:(TSFContact *)contact {
-    NSString *contactURL = [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:self.device],@"user/emergency_contact"];
+    NSString *contactURL = [NSString stringWithFormat:@"%@/%@",[self serviceURL],@"user/emergency_contact"];
     NSDictionary *contactData = @{ @"contact" : [contact toDictionary] };
     [self postWithURL:contactURL andData:contactData];
 }
 
 - (void)createActivity:(TSFActivity *)activity {
-    [self postWithURL:[self activityURLWithDevice:self.device] andData:[activity toDictionary]];
+    [self postWithURL:[self activityURL] andData:[activity toDictionary]];
 }
 
 - (TSFActivity *)currentActivity {
-    JXHTTPOperation *operation = [self getWithURL:[self currentActivityURLWithDevice:self.device]];
+    JXHTTPOperation *operation = [self getWithURL:[self currentActivityURL]];
 
     TSFActivity *activity = nil;
 
@@ -62,21 +62,21 @@
 }
 
 - (void)deleteCurrentActivity {
-    [self deleteWithURL:[self currentActivityURLWithDevice:self.device]];
+    [self deleteWithURL:[self currentActivityURL]];
 }
 
 - (void)pushLocation:(NSDictionary *)dictionary {
     NSDictionary *locationData = @{@"location":dictionary};
-    [self postWithURL:[self updateLocationURLWithDevice:self.device] andData:locationData];
+    [self postWithURL:[self updateLocationURL] andData:locationData];
 }
 
 - (BOOL)hasEmergencyAlreadyBeenInitiated {
-    JXHTTPOperation *operation = [self getWithURL:[self initiateEmergencyURLWithDevice:self.device]];
+    JXHTTPOperation *operation = [self getWithURL:[self initiateEmergencyURL]];
     return (operation.responseStatusCode == 200);
 }
 
 - (void)initiateEmergency {
-    [self postWithURL:[self initiateEmergencyURLWithDevice:self.device] andData:@{}];
+    [self postWithURL:[self initiateEmergencyURL] andData:@{}];
 }
 
 #pragma mark - Service Information
@@ -85,33 +85,34 @@
     return @"http://api.trailsafeapp.com";
 }
 
-- (NSString *)activityURLWithDevice:device {
-    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"user/activities"];
+- (NSString *)serviceURLWithDevice {
+    return [NSString stringWithFormat:@"%@/devices/%@",[self serviceURL],[self device]];
 }
 
-- (NSString *)userURLWithDevice:(NSString *)device {
-    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"user"];
+- (NSString *)activityURL {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice],@"user/activities"];
 }
 
-- (NSString *)currentActivityURLWithDevice:(NSString *)device {
-    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"current_activity"];
+- (NSString *)userURL {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice],@"user"];
 }
 
-- (NSString *)updateLocationURLWithDevice:(NSString *)device {
-    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"locations"];
+- (NSString *)currentActivityURL {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice],@"current_activity"];
 }
 
-- (NSString *)initiateEmergencyURLWithDevice:(NSString *)device {
-    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice:device],@"help_request"];
+- (NSString *)updateLocationURL {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice],@"locations"];
+}
+
+- (NSString *)initiateEmergencyURL {
+    return [NSString stringWithFormat:@"%@/%@",[self serviceURLWithDevice],@"help_request"];
 }
 
 - (NSString *)apiKey {
     return @"d86717e11cbb54c45390bbb6262c0df3537d24b5d283a380800620035fe5f47622b770487dbadd9feec0dfbeaf64c5b3423ed38ce99504169481686a5ce5c26e";
 }
 
-- (NSString *)serviceURLWithDevice:(NSString *)device {
-    return [NSString stringWithFormat:@"%@/devices/%@",[self serviceURL],device];
-}
 
 #pragma mark - Request Methods
 
