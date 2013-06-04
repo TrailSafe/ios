@@ -8,7 +8,6 @@
 
 #import "TSFLocationService.h"
 #import "TSFServiceProvider.h"
-#import "TSFDevice.h"
 
 @interface TSFLocationService ()
 
@@ -68,7 +67,7 @@
         
         NSDictionary *coordinate = @{@"lat": [NSNumber numberWithDouble:location.coordinate.latitude], @"lng": [NSNumber numberWithDouble:location.coordinate.longitude] };
         
-        TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+        TSFServiceProvider *provider = [TSFServiceProvider provider];
         [provider pushLocation:coordinate];
 
     }];

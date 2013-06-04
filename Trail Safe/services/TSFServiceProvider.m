@@ -17,6 +17,21 @@
 
 @implementation TSFServiceProvider
 
+#pragma mark
+
++ (id)provider {
+    static TSFServiceProvider *provider = nil;
+    
+    if (!provider) {
+       provider = [[self alloc] initWithDevice:[TSFDevice deviceID]];
+    }
+    
+    return provider;
+}
+
+
+#pragma mark - Initialization
+
 - (id)initWithDevice:(NSString *)device {
     self = [super init];
     if (self) {
@@ -24,6 +39,8 @@
     }
     return self;
 }
+
+#pragma mark - API
 
 - (BOOL)doesUserExists {
     JXHTTPOperation *response = [self getWithURL:[self userURL]];

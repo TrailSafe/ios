@@ -7,7 +7,6 @@
 //
 
 #import "TSFAppDelegate.h"
-#import "TSFDevice.h"
 #import "TSFServiceProvider.h"
 #import "TSFLocationService.h"
 
@@ -18,7 +17,7 @@
     [self generateUniqueID];
     [self configureLocationServices];
     
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
     
     if (! [provider doesUserExists] && [[TSFUser currentUser] name]) {
         [provider createUser:[TSFUser currentUser]];

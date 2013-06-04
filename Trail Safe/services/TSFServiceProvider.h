@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TSFDevice.h"
 #import "TSFUser.h"
 #import "TSFContact.h"
 #import "TSFActivity.h"
 
 @interface TSFServiceProvider : NSObject
+
++ (id)provider;
 
 - (id)initWithDevice:(NSString *)device;
 - (BOOL)doesUserExists;

@@ -9,7 +9,6 @@
 #import "TSFOnHikeViewController.h"
 #import "JDDateCountdownFlipView.h"
 #import "TSFServiceProvider.h"
-#import "TSFDevice.h"
 
 @interface TSFOnHikeViewController ()
 
@@ -27,7 +26,7 @@
 
 - (NSDate *)countdownToDate {
     
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
     TSFActivity *currentActivity = [provider currentActivity];
     return [NSDate dateWithTimeIntervalSinceNow:[[currentActivity durationInSeconds] intValue]];
 }
@@ -46,7 +45,7 @@
 
 
 - (IBAction)finishHike:(id)sender {
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
     [provider deleteCurrentActivity];
     [self performSegueWithIdentifier:@"finishHike" sender:self];
 }

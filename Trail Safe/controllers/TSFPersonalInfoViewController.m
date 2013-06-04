@@ -9,7 +9,6 @@
 #import "TSFPersonalInfoViewController.h"
 #import "TSFUser.h"
 #import "TSFServiceProvider.h"
-#import "TSFDevice.h"
 
 @interface TSFPersonalInfoViewController ()
 
@@ -46,7 +45,7 @@
     TSFUser *user = [[TSFUser alloc] initWithDictionary:userInfo];
     [TSFUser saveUserAsCurrentUser:user];
     
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
     [provider createUser:user];
     
     [self segueToCollectEmergencyContactInformation];

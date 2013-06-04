@@ -9,7 +9,6 @@
 #import "TSFHomeViewController.h"
 #import "TSFUser.h"
 #import "TSFServiceProvider.h"
-#import "TSFDevice.h"
 
 @interface TSFHomeViewController ()
 
@@ -24,7 +23,7 @@
         [self segueToGatherPersonalInformation];
     }
     
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];    
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
     if ([provider currentActivity]) {
         [self segueToOnHike];
     }

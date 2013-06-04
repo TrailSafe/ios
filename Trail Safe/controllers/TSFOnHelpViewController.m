@@ -8,7 +8,6 @@
 
 #import "TSFOnHelpViewController.h"
 #import "TSFServiceProvider.h"
-#import "TSFDevice.h"
 
 @interface TSFOnHelpViewController ()
 
@@ -18,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
 
     if (! [provider hasEmergencyAlreadyBeenInitiated]) {
         [provider initiateEmergency];

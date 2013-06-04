@@ -8,7 +8,6 @@
 
 #import "TSFStartHikeViewController.h"
 #import "TSFActivity.h"
-#import "TSFDevice.h"
 #import "TSFServiceProvider.h"
 
 @interface TSFStartHikeViewController ()
@@ -30,7 +29,7 @@
 }
 
 - (IBAction)startHike:(id)sender {
-    TSFServiceProvider *provider = [[TSFServiceProvider alloc] initWithDevice:[TSFDevice deviceID]];
+    TSFServiceProvider *provider = [TSFServiceProvider provider];
 
     TSFActivity *activity = [[TSFActivity alloc] initWithDictionary:@{@"name": @"Solo Hike", @"time_remaining": self.lastSelectedHikeTime }];
     [provider createActivity:activity];
